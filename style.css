@@ -1,0 +1,87 @@
+:root {
+  --background-color: #f4f4f4;
+  --background-secondary-color: #333333;
+  --text-color: #333333;
+  --text-secondary-color: #ffffff;
+  --action-color: #f68720;
+
+  --desktop-spacing: 20px;
+  --mobile-spacing: 10px;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  /* Convert font-size for REM sizing */
+  font-size: 62.5%;
+  color: var(--text-color);
+}
+
+body {
+  background-color: var(--background-color);
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  /* REM font sizing is better for accessibility. 2rem = 20px */
+  font-size: 2rem;
+  text-align: center;
+}
+
+header {
+  padding: var(--desktop-spacing);
+  background-color: var(--background-secondary-color);
+}
+
+header h1 {
+  color: var(--text-secondary-color);
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+main {
+  padding: var(--desktop-spacing);
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 2.6rem;
+}
+
+p {
+  line-height: 1.4;
+}
+
+a {
+  color: var(--action-color);
+}
+
+.button {
+  background-color: var(--action-color);
+  color: var(--text-secondary-color);
+  padding: var(--desktop-spacing);
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  letter-spacing: 1.4;
+  line-height: 1;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Mobile Styling */
+@media (max-width: 768px) {
+
+  header {
+    padding: var(--mobile-spacing);
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
