@@ -1,19 +1,9 @@
-# HTML/CSS/JS Base styled
+# n8makes.com
 
-A simple starter template for web development with HTML, CSS, and JavaScript. With modern normalize CSS, basic CSS variables, and styling. It also includes Google fonts example.
+This is where I cook and link to all the things I design and build. Welcome to my kitchen.
 
-## Usage
+## Static Website
 
-This template includes:
-- Basic HTML structure
-- Linked CSS file
-- Linked JavaScript file
+Built with HTML, CSS, and Javascript.
 
-Just start editing the files:
-- index.html - Main HTML file
-- style.css - CSS styling
-- script.js - JavaScript code
-
-## License
-
-Feel free to use this template for any of your projects.
+[n8makes.com](https://n8makes.com)
