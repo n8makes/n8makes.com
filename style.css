@@ -10,27 +10,28 @@
 }
 
 html {
-  height: 100%;
-  width: 100%;
   /* Convert font-size for REM sizing */
   font-size: 62.5%;
-  color: var(--text-color);
+  color: var(--text-secondary-color);
 }
 
 body {
-  background-color: var(--background-color);
+  min-height: 100vh;
+  min-width: 100vw;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
   /* REM font sizing is better for accessibility. 2rem = 20px */
   font-size: 2rem;
-  text-align: center;
+  background-color: #301600;
 }
 
 header {
   padding: var(--desktop-spacing);
   background-color: var(--background-secondary-color);
+  border-bottom: 1px solid #272727;
+  text-align: center;
 }
 
 header h1 {
@@ -40,7 +41,13 @@ header h1 {
 }
 
 main {
+  background: rgb(51, 51, 51);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(62, 62, 62, 1) 35%, rgba(48, 22, 0, 1) 100%);
   padding: var(--desktop-spacing);
+}
+
+h1 {
+  margin: 0;
 }
 
 h2 {
@@ -70,6 +77,15 @@ a {
   border-radius: 5px;
 }
 
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.half-width {
+  width: 50%;
+}
+
 /* Mobile Styling */
 @media (max-width: 768px) {
 
@@ -83,5 +99,13 @@ a {
 
   h2 {
     font-size: 2rem;
+  }
+
+  .flex {
+    display: block;
+  }
+
+  .half-width {
+    width: 100%;
   }
 }
