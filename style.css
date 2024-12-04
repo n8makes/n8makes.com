@@ -7,6 +7,9 @@
 
   --desktop-spacing: 20px;
   --mobile-spacing: 10px;
+
+  --shadow-color: var(--action-color);
+  --shadow-color-light: var(--action-color);
 }
 
 html {
@@ -20,7 +23,7 @@ body {
   min-width: 100vw;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   /* REM font sizing is better for accessibility. 2rem = 20px */
   font-size: 2rem;
@@ -30,14 +33,22 @@ body {
 header {
   padding: var(--desktop-spacing);
   background-color: var(--background-secondary-color);
-  border-bottom: 1px solid #272727;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 }
 
 header h1 {
   color: var(--text-secondary-color);
   font-weight: 900;
   font-size: 3rem;
+  width: 100px;
+}
+
+header h2 {
+  width: auto;
+  margin: 0 40px;
 }
 
 main {
@@ -53,6 +64,7 @@ h1 {
 h2 {
   font-weight: 200;
   font-size: 2.6rem;
+  margin: 0 0 10px 0;
 }
 
 p {
@@ -77,13 +89,53 @@ a {
   border-radius: 5px;
 }
 
-.flex {
+.row {
   display: flex;
   justify-content: space-between;
 }
 
-.half-width {
-  width: 50%;
+.intro {
+  width: 68%;
+  background: rgba(0, 0, 0, 0.15);
+  padding: 20px 40px;
+  margin: 0 0 40px 0;
+  max-width: 700px;
+  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.3);
+}
+
+.connect {
+  padding-left: 2%;
+  width: 30%;
+}
+
+.neon {
+  color: #ffffff;
+  animation: neon 3s infinite;
+}
+
+h2.neon {
+  font-size: 3.3rem;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+@keyframes neon {
+  0% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
+  50% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+  }
+  100% {
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+  }
 }
 
 /* Mobile Styling */
@@ -93,19 +145,34 @@ a {
     padding: var(--mobile-spacing);
   }
 
+  main {
+  padding: var(--mobile-spacing);
+  }
+
   header h1 {
     font-size: 2.4rem;
+    width: 85px;
   }
 
   h2 {
     font-size: 2rem;
   }
 
-  .flex {
+  h2.neon {
+    font-size: 2rem;
+    margin: 0 20px;
+  }
+
+  .row {
     display: block;
   }
 
-  .half-width {
+  .intro {
     width: 100%;
+  }
+
+  .connect {
+    width: 100%;
+    padding: 0;
   }
 }
