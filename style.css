@@ -20,7 +20,6 @@ html {
 
 body {
   min-height: 100vh;
-  min-width: 100vw;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -67,6 +66,12 @@ h2 {
   margin: 0 0 10px 0;
 }
 
+h3 {
+  font-weight: 200;
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
 p {
   line-height: 1.4;
 }
@@ -89,9 +94,14 @@ a {
   border-radius: 5px;
 }
 
+.small {
+  font-size: 1.2rem;
+}
+
 .row {
   display: flex;
   justify-content: space-between;
+  max-width: 1150px;
 }
 
 .intro {
@@ -100,7 +110,18 @@ a {
   padding: 20px 40px;
   margin: 0 0 40px 0;
   max-width: 700px;
-  box-shadow: 0px 3px 4px 0px rgba(0,0,0,0.3);
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3);
+}
+
+.widgets {
+  width: 68%;
+  padding: 0 0 20px 0;
+  max-width: 700px;
+}
+
+.work-links {
+  padding-left: 2%;
+  width: 30%;
 }
 
 .connect {
@@ -140,18 +161,20 @@ h2.neon {
 @keyframes neon {
   0% {
     text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
   }
+
   50% {
     text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-    0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
-    0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+      0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+      0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
   }
+
   100% {
     text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
-    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
-    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+      0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+      0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
   }
 }
 
@@ -163,7 +186,7 @@ h2.neon {
   }
 
   main {
-  padding: var(--mobile-spacing);
+    padding: var(--mobile-spacing);
   }
 
   header h1 {
@@ -184,12 +207,13 @@ h2.neon {
     display: block;
   }
 
+  .widgets,
   .intro {
     width: 100%;
   }
 
   .connect {
     width: 100%;
-    padding: 0;
+    padding: 0 var(--mobile-spacing);
   }
 }
