@@ -52,7 +52,7 @@ header h2 {
 
 main {
   background: rgb(51, 51, 51);
-  background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(62, 62, 62, 1) 35%, rgba(48, 22, 0, 1) 100%);
+  background: linear-gradient(180deg, rgba(51, 51, 51, 1) 0%, rgba(60, 60, 60, 1) 100%);
   padding: var(--desktop-spacing);
 }
 
@@ -72,12 +72,17 @@ h3 {
   margin: 10px 0;
 }
 
+h3 a {
+  font-weight: 500;
+}
+
 p {
   line-height: 1.4;
 }
 
 a {
   color: var(--action-color);
+  text-underline-offset: 5px;
 }
 
 .button {
@@ -119,6 +124,13 @@ a {
   max-width: 700px;
 }
 
+.widget {
+  display: block;
+  margin-bottom: 40px;
+  border-top: 1px solid #666;
+  padding: 8px 0 0 0;
+}
+
 .work-links {
   padding-left: 2%;
   width: 30%;
@@ -147,8 +159,9 @@ a {
 }
 
 .neon {
-  color: #ffffff;
-  animation: neon 3s infinite;
+  /* color: #ffffff;
+  animation: neon 3s infinite; */
+  color: var(--action-color);
 }
 
 h2.neon {
@@ -215,5 +228,10 @@ h2.neon {
   .connect {
     width: 100%;
     padding: 0 var(--mobile-spacing);
+  }
+
+  .work-links {
+    width: 100%;
+    padding: 0;
   }
 }

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Meta tags for proper rendering -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Change this title to your project name -->
+  <title>n8makes | my kitchen</title>
+  <meta name="description"
+    content="This is where I cook and link to all the things I design and build. Welcome to my kitchen.">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Import Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:wght@100;400;700&family=Source+Code+Pro:ital,wght@0,200;0,600;1,400&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS link -->
+  <link href="modern-normalize.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="calculator.css" rel="stylesheet" type="text/css" />
+
+  <script src="dollar-to-sats-web-component.js"></script>
+  <script src="calculator.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="/" title="n8makes.com">
+        <img src="images/logo.png" alt="n8makes" width="100" height="100" />
+      </a>
+    </h1>
+    <h2 class="neon">Welcome to my Kitchen!</h2>
+  </header>
+  <main>
+    <div class="container">
+      <h1 class="main-header">Healthy Weight and Protein Intake Calculator</h1>
+
+      <div class="calculator-grid">
+        <div class="input-section">
+          <div class="form-left">
+            <div class="form-group">
+              <label>Select Gender:</label>
+              <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male" checked />
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female">Female</label>
+              </div>
+            </div>
+
+            <div class="form-group unit-group">
+              <label>Select Unit System:</label>
+              <div class="radio-group">
+                <input type="radio" id="imperial" name="unit-system" value="imperial" checked />
+                <label for="imperial">Imperial</label>
+                <input type="radio" id="metric" name="unit-system" value="metric" />
+                <label for="metric">Metric</label>
+              </div>
+            </div>
+          </div>
+          <div class="form-right">
+            <div id="imperial-inputs">
+              <div class="form-group">
+                <label for="weight-imperial">Weight (lbs):</label>
+                <input type="number" id="weight-imperial" value="150" min="0" max="1000" />
+              </div>
+              <div class="imperial-height">
+                <div class="form-group">
+                  <label for="height-feet">Height (feet):</label>
+                  <input type="number" id="height-feet" value="5" min="0" max="8" />
+                </div>
+                <div class="form-group">
+                  <label for="height-inches">Height (inches):</label>
+                  <input type="number" id="height-inches" value="7" min="0" max="11" />
+                </div>
+              </div>
+            </div>
+
+            <div id="metric-inputs" style="display: none">
+              <div class="form-group">
+                <label for="weight-metric">Weight (kg):</label>
+                <input type="number" id="weight-metric" value="70" min="0" max="500" />
+              </div>
+              <div class="form-group">
+                <label for="height-metric">Height (cm):</label>
+                <input type="number" id="height-metric" value="170" min="0" max="300" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Results Section -->
+      <div class="result-section">
+        <h2>
+          Healthy weight range: <span id="weight-range">0</span>
+        </h2>
+        <h2>
+          Daily protein intake:
+          <span><span id="protein-intake">0</span> grams</span>
+        </h2>
+      </div>
+      <!-- Information Section -->
+      <div class="info-section">
+        <p><a href="https://www.verywellhealth.com/body-composition-5509458" target="_blank">Healthy body
+            composition</a> is our main goal. <strong>Increase muscle mass and bone density. Decrease and maintain low
+            body fat percentages.</strong></p>
+        <p> We start losing 3-8% of our muscle mass and bone density around every decade, around age thirty. Even more
+          after age sixty. Eating enough protein every day along with resistence training slows this process down
+          dramatically.</p>
+        <p>BMI isn’t always accurate but it can be used to determine our ideal protein intake. Which is around one gram
+          of protein per one pound of ideal body weight.</p>
+        <p>If you aren't doing whole body resistance training consistently, you most likely have a high body fat
+          percentage. <strong>Even if you’re skinny or at a healthy weight according the BMI calculator.</strong> Your
+          are still at risk for metabolic diseases.</p>
+        <p>If you are overweight, using the BMI calculator is a great way to find an initial weight goal.</p>
+        <h3>Your BMI: <span id="bmi-value">0</span></h3>
+        <h3>Category: <span id="bmi-category"></span></h3>
+        <h3>BMI Categories:</h3>
+        <ul>
+          <li>
+            <span class="category-underweight">Underweight</span>:
+            BMI less than 18.5
+          </li>
+          <li>
+            <span class="category-normal">Normal weight</span>: BMI
+            between 18.5 and 24.9
+          </li>
+          <li>
+            <span class="category-overweight">Overweight</span>: BMI
+            between 25 and 29.9
+          </li>
+          <li>
+            <span class="category-obese">Obese</span>: BMI of 30 or
+            greater
+          </li>
+        </ul>
+
+        <h3>Note:</h3>
+        <p>
+          BMI (Body Mass Index) is a screening tool but not a diagnostic tool. Important
+          considerations:
+        </p>
+        <ul>
+          <li>
+            <strong>Gender Differences</strong>: Women typically
+            have higher body fat percentages than men. This
+            calculator uses slightly different ranges:
+            <ul>
+              <li>Males: Normal BMI range of 18.5-25.0</li>
+              <li>Females: Normal BMI range of 18.5-24.5</li>
+            </ul>
+          </li>
+          <li>
+            Other factors such as age, ethnicity, muscle mass, and
+            body composition can influence the relationship between
+            body fat and BMI
+          </li>
+          <li>
+            Athletes or very muscular individuals may have a high
+            BMI but not excess body fat
+          </li>
+          <li>
+            Please consult with a healthcare provider for a complete
+            health assessment
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
