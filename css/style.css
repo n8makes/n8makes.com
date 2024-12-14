@@ -16,6 +16,7 @@ html {
   /* Convert font-size for REM sizing */
   font-size: 62.5%;
   color: var(--text-secondary-color);
+  background-color: #000;
 }
 
 body {
@@ -207,6 +208,15 @@ h2.neon {
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
 }
 
 @keyframes fadeInAnimation {
