@@ -34,6 +34,7 @@ header {
   background: #000 url('../images/n8makes-hero-banner.jpg') no-repeat top center fixed;
   background-size: contain;
   background-blend-mode: lighten;
+  position: relative;
 }
 
 header h1 {
@@ -54,11 +55,37 @@ header h1 img {
   box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.28);
 }
 
-header h2 {
+header h2.neon {
   width: 100%;
   margin: 10% 0 0 0;
   background: rgba(0, 0, 0, 0.8);
   padding: 20px 0;
+  font-weight: 200;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+  right: 20px
+}
+
+.social-list li {
+  display: inline-block;
+  margin: 0 0 0 10px;
+}
+
+.social-list li a {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  width: 32px;
+  display: block;
+  height: 32px;
+  text-align: center;
+  border: 1px solid red;
 }
 
 main {
