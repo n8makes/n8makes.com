@@ -84,6 +84,7 @@ class DollarToSatsWebComponent extends HTMLElement {
           width: ${isFullWidth === 'true' ? '100%' : 'auto'};
           display: ${isFullWidth === 'true' ? 'block' : 'inline-block'};
           padding: 20px 0;
+          border-radius: 1rem;
         }
 
         .card h2 {

@@ -105,18 +105,19 @@ class BitcoinGoldMarketGrowthChart extends HTMLElement {
                 }
                 .period-selector button {
                     padding: 8px 16px;
-                    border: 1px solid #ddd;
-                    background: #ffffff;
-                    color: #666;
+                    border: 1px solid #f68720;
+                    background: #f68720;
+                    color: #fff;
                     border-radius: 4px;
                     cursor: pointer;
                     transition: all 0.2s;
                     font-size: 14px;
                 }
                 .period-selector button.active {
-                    background: #f0f0f0;
-                    border-color: #999;
+                    background: #fff;
+                    border-color: #f68720;
                     color: #333;
+                    cursor: default;
                 }
                 .period-selector button:hover {
                     border-color: #999;

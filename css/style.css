@@ -65,7 +65,7 @@ header h2.neon {
 }
 
 main {
-  padding: 0 0 var(--desktop-spacing) 0;
+  padding: 0;
 }
 
 h1 {
@@ -116,20 +116,14 @@ a {
 }
 
 .small {
-  font-size: 1.2rem;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1150px;
+  font-size: 1.3rem;
 }
 
 .intro {
   position: relative;
   background: #fff;
   color: var(--text-color);
-  padding: 60px 0;
+  padding: 60px 0 50px 0;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -169,56 +163,62 @@ a {
   display: block;
 }
 
-.widgets {
-  width: 68%;
-  padding: 0 0 20px 0;
-  max-width: 700px;
-}
-
-.widget {
-  display: block;
-  margin-bottom: 40px;
-  border-top: 1px solid #666;
-  padding: 12px 0 0 0;
-}
-
 .work-links {
-  padding-left: 2%;
-  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.work-links .work-link {
+  margin: 0 30px;
 }
 
 .connect {
-  padding: var(--desktop-spacing);
+  padding: 30px 0;
   text-align: center;
   display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+}
+
+.connect h2 {
+  margin-bottom: 20px;
 }
 
 .social-list {
   list-style: none;
-  margin: 0 auto;
+  margin: 0 25px;
   padding: 0;
 }
 
 .social-list li {
   display: inline-block;
-  margin: 0 5px;
+  margin: 0 15px;
+  min-width: 107px;
 }
 
 .social-list h3 {
   text-transform: uppercase;
   font-size: 1.4rem;
   font-weight: 200;
-  margin: 0;
+  margin: 5px 0 0 0;
   padding: 0;
+  color: #fff;
+}
+
+.social-list p {
+  margin: 5px 0 0 0;
+  font-size: 1.6rem;
+  font-weight: 800;
 }
 
 .social-list li a {
   display: block;
   text-decoration: none;
-}
-
-.connect .github-image {
-  margin: 0 10px 0 -10px;
 }
 
 .neon {
@@ -232,13 +232,69 @@ h2.neon {
   letter-spacing: 0.1rem;
 }
 
+.public-work {
+  background: #fff;
+  color: var(--text-color);
+  position: relative;
+  padding: 50px 0 0 0;
+}
+
+.public-work:before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.public-work:after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.8);
+}
+
+.public-work>h2 {
+  color: var(--text-color);
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+.public-work h3 {
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.widget {
+  padding: 25px;
+}
+
+.widget.darker {
+  background: #fbfbfb;
+}
+
 footer {
   text-align: center;
-  padding: 10px;
+  margin: 0 var(--desktop-spacing);
+  padding: 20px 0 5px;
+  border-top: 1px solid var(--text-color);
 }
 
 footer p {
+  font-size: 1.4rem;
   margin: 0;
+  padding: 0 0 15px 0;
 }
 
 @keyframes fadeInAnimation {
@@ -271,12 +327,8 @@ footer p {
     margin: 0 20px;
   }
 
-  .row {
-    display: block;
-  }
-
   .s3b-image {
-    width: 100%;
+    width: 80%;
   }
 
   .widgets,
@@ -290,16 +342,6 @@ footer p {
 
   .intro .content-container {
     padding: 0 var(--desktop-spacing);
-  }
-
-  .connect {
-    width: 100%;
-    padding: 0 var(--mobile-spacing);
-  }
-
-  .work-links {
-    width: 100%;
-    padding: 0;
   }
 }
 
@@ -320,5 +362,60 @@ footer p {
     padding-left: 20px;
     padding-right: 20px;
     margin-top: 20%
+  }
+
+  .s3b-image {
+    width: 100%;
+  }
+
+  .connect {
+    display: block;
+  }
+
+  .connect .social-container {
+    padding: 20px 0 10px 0;
+  }
+
+  .social-list {
+    margin: 0;
+  }
+
+  .social-list li {
+    margin-bottom: 10px;
+  }
+
+  .work-links {
+    display: block;
+    margin: 0;
+    text-align: left;
+  }
+
+  .work-links .work-link {
+    padding: 0 var(--desktop-spacing);
+    margin: 0 0 30px 0;
+  }
+
+  .work-link p {
+    margin-top: 2px;
+  }
+
+  .work-link h2 {
+    margin-top: 25px;
+  }
+
+  .widgets {
+    display: block;
+  }
+
+  .widget h3 {
+    margin-top: 0;
+  }
+
+  .widget.darker {
+    background: #ffffff;
+  }
+
+  .widget:nth-child(even) {
+    background: #fbfbfb;
   }
 }
