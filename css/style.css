@@ -27,13 +27,15 @@ body {
   font-style: normal;
   /* REM font sizing is better for accessibility. 2rem = 20px */
   font-size: 2rem;
-  background-color: #301600;
 }
 
 header {
   text-align: center;
   background: #000 url('../images/n8makes-hero-banner.jpg') no-repeat top center fixed;
   background-size: contain;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
   background-blend-mode: lighten;
   position: relative;
 }
@@ -46,10 +48,10 @@ header h1 {
   margin: 0 auto;
   padding-top: 16%;
   opacity: 0;
-  animation: fadeInAnimation ease 2.5s;
+  animation: fadeInAnimation ease 2.3s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.3s;
 }
 
 header h1 img {
@@ -104,15 +106,23 @@ a {
 .button {
   background-color: var(--action-color);
   color: var(--text-secondary-color);
-  padding: var(--desktop-spacing);
+  padding: 15px;
   display: block;
+  margin: 10px auto 20px auto;
   text-align: center;
   text-transform: uppercase;
   font-size: 1.4rem;
   letter-spacing: 1.4;
   line-height: 1;
   text-decoration: none;
-  border-radius: 5px;
+  max-width: 200px;
+}
+
+.button:hover {
+  background-color: var(--text-color);
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
 }
 
 .small {
@@ -281,14 +291,14 @@ h2.neon {
 }
 
 .widget.darker {
-  background: #fbfbfb;
+  background: #f1f1f1;
 }
 
 footer {
   text-align: center;
   margin: 0 var(--desktop-spacing);
   padding: 20px 0 5px;
-  border-top: 1px solid var(--text-color);
+  border-top: 1px solid #444;
 }
 
 footer p {
@@ -364,10 +374,6 @@ footer p {
     margin-top: 20%
   }
 
-  .s3b-image {
-    width: 100%;
-  }
-
   .connect {
     display: block;
   }
@@ -386,13 +392,19 @@ footer p {
 
   .work-links {
     display: block;
+    justify-items: normal;
     margin: 0;
+    padding: 10px 0;
     text-align: left;
   }
 
   .work-links .work-link {
     padding: 0 var(--desktop-spacing);
-    margin: 0 0 30px 0;
+    margin: 0 0 10px 0;
+  }
+
+  .work-links .work-link:first-child {
+    margin: 0 0 50px 0;
   }
 
   .work-link p {
@@ -416,6 +428,6 @@ footer p {
   }
 
   .widget:nth-child(even) {
-    background: #fbfbfb;
+    background: #fafafa;
   }
 }
