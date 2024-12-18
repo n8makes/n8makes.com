@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  min-height: 100vh;
+  min-height: 100dvh;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -127,6 +127,10 @@ a {
 
 .small {
   font-size: 1.3rem;
+}
+
+.small-center {
+  text-align: center;
 }
 
 .intro {
@@ -279,6 +283,10 @@ h2.neon {
   color: var(--text-color);
   font-weight: 600;
   line-height: 1.5;
+}
+
+.public-work img {
+  width: 100%;
 }
 
 .widgets {
