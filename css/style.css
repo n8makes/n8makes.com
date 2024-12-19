@@ -300,7 +300,7 @@ h2.neon {
 }
 
 .widget.darker {
-  background: #d9d9d9;
+  background: #f1f1f1;
 }
 
 footer {
@@ -440,7 +440,7 @@ footer p {
     background: #ffffff;
   }
 
-  .widget:nth-child(even) {
-    background: #fafafa;
+  div.widget:nth-child(even) {
+    background: #f1f1f1;
   }
 }
