@@ -38,6 +38,7 @@ header {
   -o-background-size: contain;
   background-blend-mode: lighten;
   position: relative;
+  width: 100%;
 }
 
 header h1 {
@@ -299,7 +300,7 @@ h2.neon {
 }
 
 .widget.darker {
-  background: #f1f1f1;
+  background: #d9d9d9;
 }
 
 footer {
@@ -343,6 +344,10 @@ footer p {
   h2.neon {
     font-size: 2rem;
     margin: 0 20px;
+  }
+
+  .public-work>h2 {
+    font-size: 2.4rem;
   }
 
   .s3b-image {

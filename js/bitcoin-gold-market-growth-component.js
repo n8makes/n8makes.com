@@ -17,7 +17,7 @@ class BitcoinGoldMarketGrowthChart extends HTMLElement {
         try {
             await this.loadChartLibrary();
             this.setupEventListeners();
-            await this.fetchData(10); // Default to 10 years
+            await this.fetchData(5); // Default to 5 years
             await this.initChart();
         } catch (error) {
             console.error('Failed to initialize chart:', error);
@@ -146,8 +146,8 @@ class BitcoinGoldMarketGrowthChart extends HTMLElement {
             </style>
             <div class="period-selector">
                 <button data-period="1">1Y</button>
-                <button data-period="5">5Y</button>
-                <button data-period="10" class="active">10Y</button>
+                <button data-period="5" class="active">5Y</button>
+                <button data-period="10">10Y</button>
             </div>
             <div class="chart-container">
                 <canvas></canvas>
